@@ -79,10 +79,7 @@
     "enableVtpm": true
   },
   "tags": {
-    "items": [
-      "http-server",
-      "https-server"
-    ]
+    "items": []
   },
   "zone": "projects/calm-analog-371810/zones/europe-west1-b"
 }
