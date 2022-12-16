@@ -9,7 +9,7 @@
     {
       "autoDelete": true,
       "boot": true,
-      "deviceName": "slave1",
+      "deviceName": "slave-2",
       "initializeParams": {
         "diskSizeGb": "10",
         "diskType": "projects/calm-analog-371810/zones/us-west4-b/diskTypes/pd-balanced",
@@ -28,9 +28,14 @@
   "labels": {},
   "machineType": "projects/calm-analog-371810/zones/europe-west1-b/machineTypes/e2-medium",
   "metadata": {
-    "items": []
+    "items": [
+      {
+        "key": "startup-script",
+        "value": "apt -y install default-jdk\ntar -xzvf spark.tgz\n./spark-3.3.1-bin-hadoop3/sbin/start-slave.sh spark://spark-master.europe-west1-b.c.spark-371009.internal:7077"
+      }
+    ]
   },
-  "name": "slave1",
+  "name": "slave-2",
   "networkInterfaces": [
     {
       "accessConfigs": [
